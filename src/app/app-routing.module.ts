@@ -52,6 +52,12 @@ import { KategorijeVijesti2AddComponent } from './components/admin/kategorije-vi
 import { KategorijeVijesti2Component } from './components/admin/kategorije-vijesti2/kategorije-vijesti2.component';
 import { KategorijeVijesti1IzmjenaComponent } from './components/admin/kategorije-vijesti1-izmjena/kategorije-vijesti1-izmjena.component';
 import { KategorijeVijesti2IzmjenaComponent } from './components/admin/kategorije-vijesti2-izmjena/kategorije-vijesti2-izmjena.component';
+import { SveVijesti1Component } from './components/admin/sve-vijesti1/sve-vijesti1.component';
+import { SveVijesti2Component } from './components/admin/sve-vijesti2/sve-vijesti2.component';
+import { Vijesti1AddComponent } from './components/admin/vijesti1-add/vijesti1-add.component';
+import { Vijesti2AddComponent } from './components/admin/vijesti2-add/vijesti2-add.component';
+import { Vijesti1IzmjenaComponent } from './components/admin/vijesti1-izmjena/vijesti1-izmjena.component';
+import { Vijesti2IzmjenaComponent } from './components/admin/vijesti2-izmjena/vijesti2-izmjena.component';
 
 
 /*
@@ -77,7 +83,11 @@ const routes: Routes = [
       {path: 'prijave', component: PrijaveComponent },
       {path: 'prijave/:p', component: PrijaveComponent },
       {path: 'vijesti', component: SveVijestiComponent },
+      {path: 'vijesti1', component: SveVijesti1Component },
+      {path: 'vijesti2', component: SveVijesti2Component },
       {path: 'nova-vijest', component: VijestiAddComponent },
+      {path: 'nova-vijest1', component: Vijesti1AddComponent },
+      {path: 'nova-vijest2', component: Vijesti2AddComponent },
       {path: 'nova-kategorija-vijesti', component: KategorijeVijestiAddComponent },
       {path: 'kategorije-vijesti', component: KategorijeVijestiComponent },
       {path: 'nova-kategorija-vijesti1', component: KategorijeVijesti1AddComponent },
@@ -88,6 +98,8 @@ const routes: Routes = [
       {path: 'izmjena-kategorija-vijest1/:id', component: KategorijeVijesti1IzmjenaComponent},
       {path: 'izmjena-kategorija-vijest2/:id', component: KategorijeVijesti2IzmjenaComponent},
       {path: 'izmjena-vijest/:id', component: VijestiIzmjenaComponent },
+      {path: 'izmjena-vijest1/:id', component: Vijesti1IzmjenaComponent },
+      {path: 'izmjena-vijest2/:id', component: Vijesti2IzmjenaComponent },
       {path: 'proizvodi', component: SviProizvodiComponent },
       {path: 'nova-proizvod', component: ProizvodiAddComponent},
       {path: 'nova-kategorija-proizvoda', component: KategorijeProizvodaAddComponent},
