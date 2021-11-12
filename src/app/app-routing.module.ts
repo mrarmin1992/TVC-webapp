@@ -38,6 +38,14 @@ import { ProizvodiSveComponent } from './components/proizvodi-sve/proizvodi-sve.
 import { HomeComponents1Component } from './components/home-components1/home-components1.component';
 import { HomeComponents2Component } from './components/home-components2/home-components2.component';
 import { VijestiSve1Component } from './components/vijesti-sve1/vijesti-sve1.component';
+import { KategorijeProizvoda1Component } from './components/admin/kategorije-proizvoda1/kategorije-proizvoda1.component';
+import { KategorijeProizvoda2Component } from './components/admin/kategorije-proizvoda2/kategorije-proizvoda2.component';
+import { KategorijeProizvoda1AddComponent } from './components/admin/kategorije-proizvoda1-add/kategorije-proizvoda1-add.component';
+import { KategorijeProizvoda2AddComponent } from './components/admin/kategorije-proizvoda2-add/kategorije-proizvoda2-add.component';
+// tslint:disable-next-line: max-line-length
+import { KategorijeProizvoda1IzmjenaComponent } from './components/admin/kategorije-proizvoda1-izmjena/kategorije-proizvoda1-izmjena.component';
+// tslint:disable-next-line: max-line-length
+import { KategorijeProizvoda2IzmjenaComponent } from './components/admin/kategorije-proizvoda2-izmjena/kategorije-proizvoda2-izmjena.component';
 
 
 /*
@@ -72,7 +80,13 @@ const routes: Routes = [
       {path: 'nova-proizvod', component: ProizvodiAddComponent},
       {path: 'nova-kategorija-proizvoda', component: KategorijeProizvodaAddComponent},
       {path: 'kategorije-proizvodi', component: KategorijeProizvodaComponent },
+      {path: 'kategorije-proizvodi1', component: KategorijeProizvoda1Component },
+      {path: 'kategorije-proizvodi2', component: KategorijeProizvoda2Component },
+      {path: 'nova-kategorija-proizvoda1', component: KategorijeProizvoda1AddComponent},
+      {path: 'nova-kategorija-proizvoda2', component: KategorijeProizvoda2AddComponent},
       {path: 'izmjena-kategorija-proizvod/:id', component: KategorijeProizvodaIzmjenaComponent},
+      {path: 'izmjena-kategorija-proizvod1/:id', component: KategorijeProizvoda1IzmjenaComponent},
+      {path: 'izmjena-kategorija-proizvod2/:id', component: KategorijeProizvoda2IzmjenaComponent},
       {path: 'izmjena-proizvod/:id', component: ProizvodiIzmjenaComponent },
     ] },
   {path: 'njemacki', component: HomeComponents1Component},

@@ -85,6 +85,12 @@ import { Proizvodi1Component } from './components/proizvodi1/proizvodi1.componen
 import { Proizvodi2Component } from './components/proizvodi2/proizvodi2.component';
 import { Aktuelno1Component } from './components/aktuelno1/aktuelno1.component';
 import { Aktuelno2Component } from './components/aktuelno2/aktuelno2.component';
+import { KategorijeProizvoda1Component } from './components/admin/kategorije-proizvoda1/kategorije-proizvoda1.component';
+import { KategorijeProizvoda2Component } from './components/admin/kategorije-proizvoda2/kategorije-proizvoda2.component';
+import { KategorijeProizvoda1AddComponent } from './components/admin/kategorije-proizvoda1-add/kategorije-proizvoda1-add.component';
+import { KategorijeProizvoda2AddComponent } from './components/admin/kategorije-proizvoda2-add/kategorije-proizvoda2-add.component';
+import { KategorijeProizvoda1IzmjenaComponent } from './components/admin/kategorije-proizvoda1-izmjena/kategorije-proizvoda1-izmjena.component';
+import { KategorijeProizvoda2IzmjenaComponent } from './components/admin/kategorije-proizvoda2-izmjena/kategorije-proizvoda2-izmjena.component';
 
 
 // tslint:disable-next-line: typedef
@@ -159,7 +165,13 @@ export function rootLoaderFactory(http: HttpClient) {
     Proizvodi1Component,
     Proizvodi2Component,
     Aktuelno1Component,
-    Aktuelno2Component
+    Aktuelno2Component,
+    KategorijeProizvoda1Component,
+    KategorijeProizvoda2Component,
+    KategorijeProizvoda1AddComponent,
+    KategorijeProizvoda2AddComponent,
+    KategorijeProizvoda1IzmjenaComponent,
+    KategorijeProizvoda2IzmjenaComponent
   ],
   imports: [
     BrowserModule,
