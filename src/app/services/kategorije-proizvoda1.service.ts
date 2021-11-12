@@ -33,7 +33,7 @@ getKategorijeProizvodi(): Observable<KategorijaProizvoda1[]> {
       return collection$;
   }
   getKategorijaProizvodi1(id: string): Observable<KategorijaProizvoda1> {
-    this.kategorijaProizvodi1Doc = this.afs.doc<KategorijaProizvoda1>(`kategorijeProizvodi/${id}`);
+    this.kategorijaProizvodi1Doc = this.afs.doc<KategorijaProizvoda1>(`kategorijeProizvodi1/${id}`);
     this.kategorijaProizvodi1 = this.kategorijaProizvodi1Doc.snapshotChanges().pipe(
       map(action => {
         if (action.payload.exists === false) {
