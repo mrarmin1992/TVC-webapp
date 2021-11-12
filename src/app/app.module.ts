@@ -91,6 +91,12 @@ import { KategorijeProizvoda1AddComponent } from './components/admin/kategorije-
 import { KategorijeProizvoda2AddComponent } from './components/admin/kategorije-proizvoda2-add/kategorije-proizvoda2-add.component';
 import { KategorijeProizvoda1IzmjenaComponent } from './components/admin/kategorije-proizvoda1-izmjena/kategorije-proizvoda1-izmjena.component';
 import { KategorijeProizvoda2IzmjenaComponent } from './components/admin/kategorije-proizvoda2-izmjena/kategorije-proizvoda2-izmjena.component';
+import { KategorijeVijesti1Component } from './components/admin/kategorije-vijesti1/kategorije-vijesti1.component';
+import { KategorijeVijesti1AddComponent } from './components/admin/kategorije-vijesti1-add/kategorije-vijesti1-add.component';
+import { KategorijeVijesti1IzmjenaComponent } from './components/admin/kategorije-vijesti1-izmjena/kategorije-vijesti1-izmjena.component';
+import { KategorijeVijesti2IzmjenaComponent } from './components/admin/kategorije-vijesti2-izmjena/kategorije-vijesti2-izmjena.component';
+import { KategorijeVijesti2AddComponent } from './components/admin/kategorije-vijesti2-add/kategorije-vijesti2-add.component';
+import { KategorijeVijesti2Component } from './components/admin/kategorije-vijesti2/kategorije-vijesti2.component';
 
 
 // tslint:disable-next-line: typedef
@@ -171,7 +177,13 @@ export function rootLoaderFactory(http: HttpClient) {
     KategorijeProizvoda1AddComponent,
     KategorijeProizvoda2AddComponent,
     KategorijeProizvoda1IzmjenaComponent,
-    KategorijeProizvoda2IzmjenaComponent
+    KategorijeProizvoda2IzmjenaComponent,
+    KategorijeVijesti1Component,
+    KategorijeVijesti1AddComponent,
+    KategorijeVijesti1IzmjenaComponent,
+    KategorijeVijesti2IzmjenaComponent,
+    KategorijeVijesti2AddComponent,
+    KategorijeVijesti2Component
   ],
   imports: [
     BrowserModule,

@@ -46,6 +46,12 @@ import { KategorijeProizvoda2AddComponent } from './components/admin/kategorije-
 import { KategorijeProizvoda1IzmjenaComponent } from './components/admin/kategorije-proizvoda1-izmjena/kategorije-proizvoda1-izmjena.component';
 // tslint:disable-next-line: max-line-length
 import { KategorijeProizvoda2IzmjenaComponent } from './components/admin/kategorije-proizvoda2-izmjena/kategorije-proizvoda2-izmjena.component';
+import { KategorijeVijesti1AddComponent } from './components/admin/kategorije-vijesti1-add/kategorije-vijesti1-add.component';
+import { KategorijeVijesti1Component } from './components/admin/kategorije-vijesti1/kategorije-vijesti1.component';
+import { KategorijeVijesti2AddComponent } from './components/admin/kategorije-vijesti2-add/kategorije-vijesti2-add.component';
+import { KategorijeVijesti2Component } from './components/admin/kategorije-vijesti2/kategorije-vijesti2.component';
+import { KategorijeVijesti1IzmjenaComponent } from './components/admin/kategorije-vijesti1-izmjena/kategorije-vijesti1-izmjena.component';
+import { KategorijeVijesti2IzmjenaComponent } from './components/admin/kategorije-vijesti2-izmjena/kategorije-vijesti2-izmjena.component';
 
 
 /*
@@ -74,7 +80,13 @@ const routes: Routes = [
       {path: 'nova-vijest', component: VijestiAddComponent },
       {path: 'nova-kategorija-vijesti', component: KategorijeVijestiAddComponent },
       {path: 'kategorije-vijesti', component: KategorijeVijestiComponent },
+      {path: 'nova-kategorija-vijesti1', component: KategorijeVijesti1AddComponent },
+      {path: 'kategorije-vijesti1', component: KategorijeVijesti1Component },
+      {path: 'nova-kategorija-vijesti2', component: KategorijeVijesti2AddComponent },
+      {path: 'kategorije-vijesti2', component: KategorijeVijesti2Component },
       {path: 'izmjena-kategorija-vijest/:id', component: KategorijeVijestiIzmjenaComponent},
+      {path: 'izmjena-kategorija-vijest1/:id', component: KategorijeVijesti1IzmjenaComponent},
+      {path: 'izmjena-kategorija-vijest2/:id', component: KategorijeVijesti2IzmjenaComponent},
       {path: 'izmjena-vijest/:id', component: VijestiIzmjenaComponent },
       {path: 'proizvodi', component: SviProizvodiComponent },
       {path: 'nova-proizvod', component: ProizvodiAddComponent},
