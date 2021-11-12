@@ -81,6 +81,10 @@ import { VijestiSve1Component } from './components/vijesti-sve1/vijesti-sve1.com
 import { VijestiSve2Component } from './components/vijesti-sve2/vijesti-sve2.component';
 import { Vijest2Component } from './components/vijest2/vijest2.component';
 import { Vijesti2Component } from './components/vijesti2/vijesti2.component';
+import { Proizvodi1Component } from './components/proizvodi1/proizvodi1.component';
+import { Proizvodi2Component } from './components/proizvodi2/proizvodi2.component';
+import { Aktuelno1Component } from './components/aktuelno1/aktuelno1.component';
+import { Aktuelno2Component } from './components/aktuelno2/aktuelno2.component';
 
 
 // tslint:disable-next-line: typedef
@@ -151,7 +155,11 @@ export function rootLoaderFactory(http: HttpClient) {
     VijestiSve1Component,
     VijestiSve2Component,
     Vijest2Component,
-    Vijesti2Component
+    Vijesti2Component,
+    Proizvodi1Component,
+    Proizvodi2Component,
+    Aktuelno1Component,
+    Aktuelno2Component
   ],
   imports: [
     BrowserModule,
