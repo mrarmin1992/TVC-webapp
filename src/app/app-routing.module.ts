@@ -21,7 +21,6 @@ import { PrijavaComponent } from './components/prijava/prijava.component';
 import { PrijaveComponent } from './components/admin/prijave/prijave.component';
 import { AngularFireAuthGuard, redirectLoggedInTo, canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { VijestiSveComponent } from './components/vijesti-sve/vijesti-sve.component';
-import { UslugeComponent } from './components/usluge/usluge.component';
 import { PretragaComponent } from './components/pretraga/pretraga.component';
 import { HvalaComponent } from './components/hvala/hvala.component';
 import { AuthGuard } from './guards/auth.guard';
