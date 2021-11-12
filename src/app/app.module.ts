@@ -16,7 +16,6 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { VijestiComponent } from './components/vijesti/vijesti.component';
-import { UslugeComponent } from './components/usluge/usluge.component';
 import { UkljuciSeComponent } from './components/ukljuci-se/ukljuci-se.component';
 import { BodyComponent } from './components/body/body.component';
 import { LoginComponent } from './components/login/login.component';
@@ -88,7 +87,6 @@ export function rootLoaderFactory(http: HttpClient) {
     ScrollTopComponent,
     NotFoundComponent,
     VijestiComponent,
-    UslugeComponent,
     UkljuciSeComponent,
     BodyComponent,
     LoginComponent,
