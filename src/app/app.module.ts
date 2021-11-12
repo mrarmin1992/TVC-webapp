@@ -71,6 +71,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ConvertToSpacesPipe } from './models/convert-to-spaces.pipe';
+import { HomeComponents1Component } from './components/home-components1/home-components1.component';
+import { Navbar1Component } from './components/navbar1/navbar1.component';
+import { HomeComponents2Component } from './components/home-components2/home-components2.component';
+import { Navbar2Component } from './components/navbar2/navbar2.component';
+import { Vijesti1Component } from './components/vijesti1/vijesti1.component';
+import { Vijest1Component } from './components/vijest1/vijest1.component';
+import { VijestiSve1Component } from './components/vijesti-sve1/vijesti-sve1.component';
+import { VijestiSve2Component } from './components/vijesti-sve2/vijesti-sve2.component';
+import { Vijest2Component } from './components/vijest2/vijest2.component';
+import { Vijesti2Component } from './components/vijesti2/vijesti2.component';
 
 
 // tslint:disable-next-line: typedef
@@ -82,7 +92,11 @@ export function rootLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomeComponent,
+    HomeComponents1Component,
+    HomeComponents2Component,
     NavbarComponent,
+    Navbar1Component,
+    Navbar2Component,
     HeaderComponent,
     ScrollTopComponent,
     NotFoundComponent,
@@ -127,7 +141,17 @@ export function rootLoaderFactory(http: HttpClient) {
     KategorijeProizvodaAddComponent,
     KategorijeProizvodaIzmjenaComponent,
     KrajComponent,
-    ConvertToSpacesPipe
+    ConvertToSpacesPipe,
+    HomeComponents1Component,
+    Navbar1Component,
+    HomeComponents2Component,
+    Navbar2Component,
+    Vijesti1Component,
+    Vijest1Component,
+    VijestiSve1Component,
+    VijestiSve2Component,
+    Vijest2Component,
+    Vijesti2Component
   ],
   imports: [
     BrowserModule,

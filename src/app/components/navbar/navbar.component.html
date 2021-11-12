@@ -18,15 +18,15 @@
               <div class="full_nav mt-5">
                 <div class="row" onmouseleave="closeNav_1(), closeNav_2(), closeNav_3()">
                   <ul class="main_navigation_banner navigacija" role="banner">
-                    <li><a routerLink="/pocetna" style="font-weight: bolder; color: #366956"><span [innerHTML]="'home.navbar1' | translate"></span></a></li>
-                    <li><a routerLink="/" translate style="font-weight: bolder; color:#366956"><span [innerHTML]="'home.navbar2' | translate"></span></a></li>
-                    <li><a routerLink="/vijesti" translate style="font-weight: bolder; color: #366956"><span [innerHTML]="'home.navbar3' | translate"></span></a></li>
-                    <li><a routerLink="/proizvodi" translate style="font-weight: bolder; color: #366956"><span [innerHTML]="'home.navbar4' | translate"></span></a></li>
-                    <li *ngIf="user === null"><a routerLink="/login" style="font-weight: bolder; color: #366956"><span [innerHTML]="'home.navbar5' | translate"></span></a></li>
+                    <li><a routerLink="/pocetna" style="font-weight: bolder; color: #366956">Pocetna</a></li>
+                    <li><a routerLink="/" translate style="font-weight: bolder; color:#366956">Blog</a></li>
+                    <li><a routerLink="/vijesti" translate style="font-weight: bolder; color: #366956">Vijesti</a></li>
+                    <li><a routerLink="/proizvodi" translate style="font-weight: bolder; color: #366956">Proizvodi</a></li>
+                    <li *ngIf="user === null"><a routerLink="/login" style="font-weight: bolder; color: #366956">Prijavi se</a></li>
                     <li *ngIf="user !== null"><a routerLink="/dashboard" style="font-weight: bolder; color:#366956">Dashboard</a></li>
-                    <li><a (click)="changeLanguage('es')"><img src="/assets/Slike/bosna.png" style="width: 7%; margin: 2%;"/></a>
-                    <a (click)="changeLanguage('fr')"><img src="/assets/Slike/england1.png" style="width: 7%; margin: 2%;"/></a>
-                    <a (click)="changeLanguage('en')"><img src="/assets/Slike/germany3.png" style="width: 7%; margin: 2%;"/></a></li>
+                    <li><a routerLink="/"><img src="/assets/Slike/bosna.png" style="width: 7%; margin: 2%;"/></a>
+                    <a routerLink="/engleski"><img src="/assets/Slike/england1.png" style="width: 7%; margin: 2%;"/></a>
+                    <a routerLink="/njemacki"><img src="/assets/Slike/germany3.png" style="width: 7%; margin: 2%;"/></a></li>
                   </ul>
 
                   

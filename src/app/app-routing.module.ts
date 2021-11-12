@@ -35,6 +35,9 @@ import { KategorijeProizvodaIzmjenaComponent } from './components/admin/kategori
 import { ProizvodiIzmjenaComponent } from './components/admin/proizvodi-izmjena/proizvodi-izmjena.component';
 import { ProizvodComponent } from './components/proizvod/proizvod.component';
 import { ProizvodiSveComponent } from './components/proizvodi-sve/proizvodi-sve.component';
+import { HomeComponents1Component } from './components/home-components1/home-components1.component';
+import { HomeComponents2Component } from './components/home-components2/home-components2.component';
+import { VijestiSve1Component } from './components/vijesti-sve1/vijesti-sve1.component';
 
 
 /*
@@ -72,6 +75,10 @@ const routes: Routes = [
       {path: 'izmjena-kategorija-proizvod/:id', component: KategorijeProizvodaIzmjenaComponent},
       {path: 'izmjena-proizvod/:id', component: ProizvodiIzmjenaComponent },
     ] },
+  {path: 'njemacki', component: HomeComponents1Component},
+    {path: 'vijesti1', component: VijestiSve1Component},
+
+  {path: 'engleski', component: HomeComponents2Component},
   { path: 'forgot-password', component: ForgotPasswordComponent },
   {path: '**', component: NotFoundComponent}
 
