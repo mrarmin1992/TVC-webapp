@@ -41,8 +41,7 @@ export class SviProizvodi1Component implements OnInit {
     }); } else {
       this.proizvodiService.getProducts().subscribe(proizvodi1 => {
         this.proizvodi1 = proizvodi1;
-        // tslint:disable-next-line: max-line-length
-        this.filter = this.proizvodi1.filter((proizvod1: Proizvod1) => proizvod1.Naslov.toLowerCase().includes(this.pretraga.toLowerCase()));
+        this.filter = this.proizvodi1.filter((proizvod: Proizvod1) => proizvod.Naslov.toLowerCase().includes(this.pretraga.toLowerCase()));
         this.proizvodi1 = this.filter;
       });
     }
@@ -57,4 +56,5 @@ export class SviProizvodi1Component implements OnInit {
     });
   }
 }
+
 

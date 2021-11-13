@@ -62,7 +62,7 @@
   </ngx-datatable-column>
   <ngx-datatable-column name="Akcija" [sortable]="false">
     <ng-template let-row="row" ngx-datatable-cell-template>
-      <div class="btn-group"><a routerLink="/dashboard/izmjena-proizvod2/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(row)" class="mr-2 btn"><i class="fa fa-2x fa-trash"></i></a><a routerLink="/proizvod/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-expand"></i></a></div>
+      <div class="btn-group"><a routerLink="/dashboard/izmjena-proizvod2/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(row)" class="mr-2 btn"><i class="fa fa-2x fa-trash"></i></a><a routerLink="/proizvod2/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-expand"></i></a></div>
     </ng-template>
   </ngx-datatable-column>
 

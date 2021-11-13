@@ -1,4 +1,4 @@
-<h1 class="text-center text-secondary">Proizvodi na Njemackom</h1>
+<h1 class="text-center text-secondary">Proizvodi</h1>
 <div  class="row-fluid mb-2">
   <button routerLink="/dashboard" style="background-color:transparent;top: 0;" class="btn btn-light"><i class="fa fa-lg fa-arrow-left text-secondary"></i></button>
   <div class="row mt-2 effect8">
@@ -62,7 +62,7 @@
   </ngx-datatable-column>
   <ngx-datatable-column name="Akcija" [sortable]="false">
     <ng-template let-row="row" ngx-datatable-cell-template>
-      <div class="btn-group"><a routerLink="/dashboard/izmjena-proizvod1/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(row)" class="mr-2 btn"><i class="fa fa-2x fa-trash"></i></a><a routerLink="/proizvod/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-expand"></i></a></div>
+      <div class="btn-group"><a routerLink="/dashboard/izmjena-proizvod1/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(row)" class="mr-2 btn"><i class="fa fa-2x fa-trash"></i></a><a routerLink="/proizvod1/{{row.Id}}" class="mr-2 btn"><i class="fa fa-2x fa-expand"></i></a></div>
     </ng-template>
   </ngx-datatable-column>
 

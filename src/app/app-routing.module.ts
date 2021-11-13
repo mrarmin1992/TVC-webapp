@@ -126,7 +126,7 @@ const routes: Routes = [
       {path: 'izmjena-proizvod2/:id', component: Proizvodi2IzmjenaComponent },
     ] },
   {path: 'njemacki', component: HomeComponents1Component},
-    {path: 'vijesti1', component: VijestiSve1Component},
+
 
   {path: 'engleski', component: HomeComponents2Component},
   { path: 'forgot-password', component: ForgotPasswordComponent },
