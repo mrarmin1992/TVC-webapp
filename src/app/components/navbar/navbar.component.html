@@ -20,8 +20,6 @@
                   <ul class="main_navigation_banner navigacija" role="banner">
                     <li><a routerLink="/pocetna" style="font-weight: bolder; color: #366956">Pocetna</a></li>
                     <li><a routerLink="/" translate style="font-weight: bolder; color:#366956">Blog</a></li>
-                    <li><a routerLink="/vijesti" translate style="font-weight: bolder; color: #366956">Vijesti</a></li>
-                    <li><a routerLink="/proizvodi" translate style="font-weight: bolder; color: #366956">Proizvodi</a></li>
                     <li *ngIf="user === null"><a routerLink="/login" style="font-weight: bolder; color: #366956">Prijavi se</a></li>
                     <li *ngIf="user !== null"><a routerLink="/dashboard" style="font-weight: bolder; color:#366956">Dashboard</a></li>
                     <li><a routerLink="/"><img src="/assets/Slike/bosna.png" style="width: 7%; margin: 2%;"/></a>
