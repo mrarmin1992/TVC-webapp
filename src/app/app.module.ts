@@ -103,6 +103,12 @@ import { Vijesti1AddComponent } from './components/admin/vijesti1-add/vijesti1-a
 import { Vijesti2AddComponent } from './components/admin/vijesti2-add/vijesti2-add.component';
 import { Vijesti1IzmjenaComponent } from './components/admin/vijesti1-izmjena/vijesti1-izmjena.component';
 import { Vijesti2IzmjenaComponent } from './components/admin/vijesti2-izmjena/vijesti2-izmjena.component';
+import { SviProizvodi1Component } from './components/admin/svi-proizvodi1/svi-proizvodi1.component';
+import { SviProizvodi2Component } from './components/admin/svi-proizvodi2/svi-proizvodi2.component';
+import { Proizvodi1AddComponent } from './components/admin/proizvodi1-add/proizvodi1-add.component';
+import { Proizvodi2AddComponent } from './components/admin/proizvodi2-add/proizvodi2-add.component';
+import { Proizvodi1IzmjenaComponent } from './components/admin/proizvodi1-izmjena/proizvodi1-izmjena.component';
+import { Proizvodi2IzmjenaComponent } from './components/admin/proizvodi2-izmjena/proizvodi2-izmjena.component';
 
 
 // tslint:disable-next-line: typedef
@@ -195,7 +201,13 @@ export function rootLoaderFactory(http: HttpClient) {
     Vijesti1AddComponent,
     Vijesti2AddComponent,
     Vijesti1IzmjenaComponent,
-    Vijesti2IzmjenaComponent
+    Vijesti2IzmjenaComponent,
+    SviProizvodi1Component,
+    SviProizvodi2Component,
+    Proizvodi1AddComponent,
+    Proizvodi2AddComponent,
+    Proizvodi1IzmjenaComponent,
+    Proizvodi2IzmjenaComponent
   ],
   imports: [
     BrowserModule,
