@@ -16,7 +16,7 @@ import { SeoService } from 'src/app/services/seo.service';
 export class Proizvod1Component implements OnInit {
 
   id: any;
-  proizvod1: Proizvod1;
+  proizvod: Proizvod1;
   slicno: Proizvod1[];
   nedavno: Proizvod1[];
   constructor(private proizvodiService: Proizvodi1Service,
@@ -35,29 +35,29 @@ export class Proizvod1Component implements OnInit {
     this.navbar.show();
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.id = this.activatedRoute.snapshot.params.id;
-    this.proizvodiService.getProizvod1('proizvodi1', this.id).subscribe(proizvod1 => {
-      this.proizvod1 = proizvod1;
-      const ref = this.storage.ref(`Proizvodi1/${this.proizvod1.Podnaslov}`);
-      this.proizvod1.Slika = ref.getDownloadURL();
+    this.proizvodiService.getProizvod1('proizvodi1', this.id).subscribe(proizvod => {
+      this.proizvod = proizvod;
+      const ref = this.storage.ref(`Proizvodi1/${this.proizvod.Podnaslov}`);
+      this.proizvod.Slika = ref.getDownloadURL();
       // tslint:disable-next-line: max-line-length
       // document.getElementById('shareFB').setAttribute('data-href', encodeURIComponent(document.URL));
       // tslint:disable-next-line: max-line-length
       // document.getElementById('shareFBLink').setAttribute('href', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL));
-      this.proizvodiService.getByKategorija(proizvod1.Kategorija).subscribe(slicno => {
+      this.proizvodiService.getByKategorija(proizvod.Kategorija).subscribe(slicno => {
         this.slicno = slicno;
         this.slicno.forEach(doc => {
           // tslint:disable-next-line: no-shadowed-variable
           const ref = this.storage.ref(`Proizvodi1/${doc.Podnaslov}`);
           doc.Slika = ref.getDownloadURL();
         });
-        this.slicno = this.slicno.filter(obj => obj.Id !== proizvod1.Id);
+        this.slicno = this.slicno.filter(obj => obj.Id !== proizvod.Id);
       });
-      this.storage.ref('Proizvodi1/' + this.proizvod1.Podnaslov).getDownloadURL().subscribe(slik => {
+      this.storage.ref('Proizvodi1/' + this.proizvod.Podnaslov).getDownloadURL().subscribe(slik => {
         this.seo.generateTags({
-          title: this.proizvod1.Naslov,
-          description: jQuery(this.proizvod1.Sadrzaj).text(),
+          title: this.proizvod.Naslov,
+          description: jQuery(this.proizvod.Sadrzaj).text(),
           image: slik,
-          slug: `proizvod/${this.proizvod1.Id}`
+          slug: `proizvod1/${this.proizvod.Id}`
         });
       });
     });

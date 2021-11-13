@@ -52,7 +52,7 @@ export class Proizvodi1Service {
   getProducts(): Observable<Proizvod1[]> {
       const user = this.auth.auth.currentUser.displayName;
       let collection: AngularFirestoreCollection<Proizvod1>;
-      if ( user === 'Rijad Dzanko') {
+      if ( user === 'Armin Pezo') {
         collection = this.afs.collection('proizvodi1', ref => ref.orderBy('Datum', 'desc'));
       } else {
         collection = this.afs.collection('proizvodi1', ref => ref.orderBy('Datum', 'desc').where('Objava', '==', user));

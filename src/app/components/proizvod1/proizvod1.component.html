@@ -1,3 +1,24 @@
+<!--<div onload="loadOnce()" class="pozadina">
+  <div class="container">
+    <section id="mainContent">
+      <div class="content_bottom">
+        <div class="col-lg-8 col-md-8">
+          <div class="content_bottom_left">
+            <div class="single_page_area">
+              <h2 class="post_titile">{{vijest.Naslov}} </h2>
+              <div class="single_page_content">
+                <div class="post_commentbox"> <a><i class="fa fa-tags"></i>{{vijest.Kategorija}}</a> </div>
+                <img class="img-center" [src]="vijest.Slika | async" alt="">
+                <p [innerHTML]="vijest.Sadrzaj"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+-->
 <section class="section wb pozadina">
     <div class="container">
         <div class="row pt-5">
@@ -7,21 +28,21 @@
                         <ol class="breadcrumb hidden-xs-down mb-5">
                             <li class="breadcrumb-item"><a routerLink="">Početna</a></li>
                             <li class="breadcrumb-item"><a routerLink="/proizvodi1">Proizvodi</a></li>
-                            <li class="breadcrumb-item active">{{proizvod1.Naslov}}</li>
+                            <li class="breadcrumb-item active">{{proizvod.Naslov}}</li>
                         </ol>
                         <!--<div class="fb-share-button" id="shareFB" data-layout="button" data-size="large"><a target="_blank" id="shareFBLink" class="fb-xfbml-parse-ignore">Dijeli</a></div>-->
-                        <h3>{{proizvod1.Naslov}}</h3>
-                        <div class="post_commentbox"> <a><i class="fa fa-tags"></i>{{proizvod1.Kategorija}}</a> </div>
+                        <h3>{{proizvod.Naslov}}</h3>
+                        <div class="post_commentbox"> <a><i class="fa fa-tags"></i>{{proizvod.Kategorija}}</a> </div>
                         <div class="blog-meta big-meta">
                         </div><!-- end meta -->
                     </div><!-- end title -->
   
                     <div class="single-post-media">
-                        <img [src]="proizvod1.Slika | async" alt="" style="object-fit:contain" class="img-fluid">
+                        <img [src]="proizvod.Slika | async" alt="" style="object-fit:contain" class="img-fluid">
                     </div><!-- end media -->
   
                     <div class="blog-content">
-                        <div class="" [innerHTML]="proizvod1.Sadrzaj">
+                        <div class="" [innerHTML]="proizvod.Sadrzaj">
                         </div><!-- end pp -->
                     </div><!-- end content -->
   

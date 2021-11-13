@@ -68,15 +68,14 @@ import { Proizvod1Component } from './components/proizvod1/proizvod1.component';
 import { Proizvod2Component } from './components/proizvod2/proizvod2.component';
 
 
-/*
-const redirectLoggedIndashboard = () => redirectLoggedInTo(['dashboard']);
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);*/
 
 const routes: Routes = [
 
-  { path: '', component: HomeComponent },
+  {path: '', component: HomeComponent },
   {path: 'login', component: LoginComponent},
   {path: 'vijesti', component: VijestiSveComponent},
+  {path: 'vijesti1', component: VijestiSve1Component},
+  {path: 'vijesti2', component: VijestiSve2Component},
   {path: 'vijest/:id', component: VijestComponent },
   {path: 'vijest1/:id', component: Vijest1Component },
   {path: 'vijest2/:id', component: Vijest2Component },
@@ -88,10 +87,10 @@ const routes: Routes = [
   {path: 'proizvodi1', component: ProizvodiSve1Component},
   {path: 'proizvodi2', component: ProizvodiSve2Component},
   {path: 'prijava/:id/:naziv/:p', component: PrijavaComponent},
-  { path: 'hvala', component: HvalaComponent},
+  {path: 'hvala', component: HvalaComponent},
   {path: 'pocetna', component: PocetnaComponent},
-  { path: 'registracija', component: SignUpComponent},
-  { path: 'dashboard', component: DashboardComponent,
+  {path: 'registracija', component: SignUpComponent},
+  {path: 'dashboard', component: DashboardComponent,
     children: [
       {path: '', component: DashboardIndexComponent },
       {path: 'prijave', component: PrijaveComponent },
@@ -134,11 +133,9 @@ const routes: Routes = [
       {path: 'izmjena-proizvod2/:id', component: Proizvodi2IzmjenaComponent },
     ] },
       {path: 'njemacki', component: Home1Component},
-      {path: 'vijesti1', component: VijestiSve1Component},
-      {path: 'vijesti2', component: VijestiSve2Component},
-  {path: 'engleski', component: Home2Component},
-  { path: 'forgot-password', component: ForgotPasswordComponent },
-  {path: '**', component: NotFoundComponent}
+      {path: 'engleski', component: Home2Component},
+      { path: 'forgot-password', component: ForgotPasswordComponent },
+      {path: '**', component: NotFoundComponent}
 
 ];
 
