@@ -2,24 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Meta } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Vijest2 } from 'src/app/models/Vijest2';
+import { Proizvod2 } from 'src/app/models/Proizvod2';
 import { FooterService } from 'src/app/services/footer.service';
 import { NavbarService } from 'src/app/services/navbar.service';
+import { Proizvodi2Service } from 'src/app/services/proizvodi2.service';
 import { SeoService } from 'src/app/services/seo.service';
-import { Vijesti2Service } from 'src/app/services/vijesti2.service';
 
 @Component({
-  selector: 'app-vijest2',
-  templateUrl: './vijest2.component.html',
-  styleUrls: ['./vijest2.component.css']
+  selector: 'app-proizvod2',
+  templateUrl: './proizvod2.component.html',
+  styleUrls: ['./proizvod2.component.css']
 })
-export class Vijest2Component implements OnInit {
+export class Proizvod2Component implements OnInit {
 
   id: any;
-  vijest: Vijest2;
-  slicno: Vijest2[];
-  nedavno: Vijest2[];
-  constructor(private vijestiService: Vijesti2Service,
+  proizvod2: Proizvod2;
+  slicno: Proizvod2[];
+  nedavno: Proizvod2[];
+  constructor(private proizvodiService: Proizvodi2Service,
               private storage: AngularFireStorage,
               private meta: Meta,
               private activatedRoute: ActivatedRoute,
@@ -35,37 +35,37 @@ export class Vijest2Component implements OnInit {
     this.navbar.show();
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.id = this.activatedRoute.snapshot.params.id;
-    this.vijestiService.getVijest2('vijesti2', this.id).subscribe(vijest => {
-      this.vijest = vijest;
-      const ref = this.storage.ref(`Vijesti2/${this.vijest.Podnaslov}`);
-      this.vijest.Slika = ref.getDownloadURL();
+    this.proizvodiService.getProizvod2('proizvodi2', this.id).subscribe(proizvod2 => {
+      this.proizvod2 = proizvod2;
+      const ref = this.storage.ref(`Proizvodi2/${this.proizvod2.Podnaslov}`);
+      this.proizvod2.Slika = ref.getDownloadURL();
       // tslint:disable-next-line: max-line-length
       // document.getElementById('shareFB').setAttribute('data-href', encodeURIComponent(document.URL));
       // tslint:disable-next-line: max-line-length
       // document.getElementById('shareFBLink').setAttribute('href', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL));
-      this.vijestiService.getByKategorija(vijest.Kategorija).subscribe(slicno => {
+      this.proizvodiService.getByKategorija(proizvod2.Kategorija).subscribe(slicno => {
         this.slicno = slicno;
         this.slicno.forEach(doc => {
           // tslint:disable-next-line: no-shadowed-variable
-          const ref = this.storage.ref(`Vijesti2/${doc.Podnaslov}`);
+          const ref = this.storage.ref(`Proizvodi2/${doc.Podnaslov}`);
           doc.Slika = ref.getDownloadURL();
         });
-        this.slicno = this.slicno.filter(obj => obj.Id !== vijest.Id);
+        this.slicno = this.slicno.filter(obj => obj.Id !== proizvod2.Id);
       });
-      this.storage.ref('Vijesti2/' + this.vijest.Podnaslov).getDownloadURL().subscribe(slik => {
+      this.storage.ref('Proizvodi2/' + this.proizvod2.Podnaslov).getDownloadURL().subscribe(slik => {
         this.seo.generateTags({
-          title: this.vijest.Naslov,
-          description: jQuery(this.vijest.Sadrzaj).text(),
+          title: this.proizvod2.Naslov,
+          description: jQuery(this.proizvod2.Sadrzaj).text(),
           image: slik,
-          slug: `vijest2/${this.vijest.Id}`
+          slug: `proizvod/${this.proizvod2.Id}`
         });
       });
     });
-    this.vijestiService.getVijesti2().subscribe(nedavno => {
+    this.proizvodiService.getProizvodi2().subscribe(nedavno => {
       this.nedavno = nedavno;
       this.nedavno.forEach(doc => {
         // tslint:disable-next-line: no-shadowed-variable
-        const ref = this.storage.ref(`Vijesti2/${doc.Podnaslov}`);
+        const ref = this.storage.ref(`Proizvodi2/${doc.Podnaslov}`);
         doc.Slika = ref.getDownloadURL();
       });
     });

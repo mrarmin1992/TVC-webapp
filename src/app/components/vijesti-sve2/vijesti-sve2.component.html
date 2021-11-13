@@ -1,1 +1,28 @@
-<p>vijesti-sve2 works!</p>
+<div class="vijestiBanner">
+    <p class="vijest naslovBaner">News</p>
+  
+  
+  </div>
+  <div class="container vijesti">
+    <div class="row red">
+      <div class="game-container ml-5">
+        <div class="grid-container">
+          <div *ngFor="let item of pageOfItems" class="grid-cell">
+            <span>
+              <a routerLink="/vijest2/{{item.Id}}" title="">
+                  <img [src]="item.Slika | async" alt="" class="" style="object-fit:contain">
+              </a>
+              <span class="proba">
+                <h4><a routerLink="/vijest2/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
+  
+              <small>{{item.Kategorija}}, <b>{{item.Datum | date}}</b></small>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pb-0 pt-3" style="margin-bottom: 100px;">
+      <jw-pagination [pageSize]="pageSize" [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+  </div>

@@ -1,19 +1,19 @@
-<div class="vijestiBanner">
-    <p class="vijest naslovBaner">Nachrichten</p>
-  
-  
+<div class="proizvodiBanner">
+    <p class="proizvod naslovBaner">Products</p>
+   
   </div>
-  <div class="container vijesti">
+  <div class="container proizvodi">
     <div class="row red">
+     
       <div class="game-container ml-5">
         <div class="grid-container">
           <div *ngFor="let item of pageOfItems" class="grid-cell">
             <span>
-              <a routerLink="/vijest1/{{item.Id}}" title="">
+              <a routerLink="/proizvod2/{{item.Id}}" title="">
                   <img [src]="item.Slika | async" alt="" class="" style="object-fit:contain">
               </a>
               <span class="proba">
-                <h4><a routerLink="/vijest1/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
+                <h4><a routerLink="/proizvod2/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
   
               <small>{{item.Kategorija}}, <b>{{item.Datum | date}}</b></small>
               </span>

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { VijestiComponent } from './components/vijesti/vijesti.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -16,16 +15,12 @@ import { KategorijeVijestiIzmjenaComponent } from './components/admin/kategorije
 import { SveVijestiComponent } from './components/admin/sve-vijesti/sve-vijesti.component';
 import { VijestiIzmjenaComponent } from './components/admin/vijesti-izmjena/vijesti-izmjena.component';
 import { VijestComponent } from './components/vijest/vijest.component';
-import { UploaderComponent } from './components/admin/uploader/uploader.component';
 import { PrijavaComponent } from './components/prijava/prijava.component';
 import { PrijaveComponent } from './components/admin/prijave/prijave.component';
-import { AngularFireAuthGuard, redirectLoggedInTo, canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { VijestiSveComponent } from './components/vijesti-sve/vijesti-sve.component';
 import { PretragaComponent } from './components/pretraga/pretraga.component';
 import { HvalaComponent } from './components/hvala/hvala.component';
-import { AuthGuard } from './guards/auth.guard';
 import { PocetnaComponent } from './components/pocetna/pocetna.component';
-import { ProizvodiComponent } from './components/proizvodi/proizvodi.component';
 import { SviProizvodiComponent } from './components/admin/svi-proizvodi/svi-proizvodi.component';
 import { ProizvodiAddComponent } from './components/admin/proizvodi-add/proizvodi-add.component';
 import { KategorijeProizvodaAddComponent } from './components/admin/kategorije-proizvoda-add/kategorije-proizvoda-add.component';
@@ -35,8 +30,6 @@ import { KategorijeProizvodaIzmjenaComponent } from './components/admin/kategori
 import { ProizvodiIzmjenaComponent } from './components/admin/proizvodi-izmjena/proizvodi-izmjena.component';
 import { ProizvodComponent } from './components/proizvod/proizvod.component';
 import { ProizvodiSveComponent } from './components/proizvodi-sve/proizvodi-sve.component';
-import { HomeComponents1Component } from './components/home-components1/home-components1.component';
-import { HomeComponents2Component } from './components/home-components2/home-components2.component';
 import { VijestiSve1Component } from './components/vijesti-sve1/vijesti-sve1.component';
 import { KategorijeProizvoda1Component } from './components/admin/kategorije-proizvoda1/kategorije-proizvoda1.component';
 import { KategorijeProizvoda2Component } from './components/admin/kategorije-proizvoda2/kategorije-proizvoda2.component';
@@ -64,6 +57,15 @@ import { Proizvodi1AddComponent } from './components/admin/proizvodi1-add/proizv
 import { Proizvodi2AddComponent } from './components/admin/proizvodi2-add/proizvodi2-add.component';
 import { Proizvodi1IzmjenaComponent } from './components/admin/proizvodi1-izmjena/proizvodi1-izmjena.component';
 import { Proizvodi2IzmjenaComponent } from './components/admin/proizvodi2-izmjena/proizvodi2-izmjena.component';
+import { VijestiSve2Component } from './components/vijesti-sve2/vijesti-sve2.component';
+import { ProizvodiSve1Component } from './components/proizvodi-sve1/proizvodi-sve1.component';
+import { ProizvodiSve2Component } from './components/proizvodi-sve2/proizvodi-sve2.component';
+import { Vijest1Component } from './components/vijest1/vijest1.component';
+import { Vijest2Component } from './components/vijest2/vijest2.component';
+import { Home2Component } from './components/home2/home2.component';
+import { Home1Component } from './components/home1/home1.component';
+import { Proizvod1Component } from './components/proizvod1/proizvod1.component';
+import { Proizvod2Component } from './components/proizvod2/proizvod2.component';
 
 
 /*
@@ -76,9 +78,15 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'vijesti', component: VijestiSveComponent},
   {path: 'vijest/:id', component: VijestComponent },
+  {path: 'vijest1/:id', component: Vijest1Component },
+  {path: 'vijest2/:id', component: Vijest2Component },
   {path: 'proizvod/:id', component: ProizvodComponent },
+  {path: 'proizvod1/:id', component: Proizvod1Component },
+  {path: 'proizvod2/:id', component: Proizvod2Component },
   {path: 'pretraga/:p', component: PretragaComponent},
   {path: 'proizvodi', component: ProizvodiSveComponent},
+  {path: 'proizvodi1', component: ProizvodiSve1Component},
+  {path: 'proizvodi2', component: ProizvodiSve2Component},
   {path: 'prijava/:id/:naziv/:p', component: PrijavaComponent},
   { path: 'hvala', component: HvalaComponent},
   {path: 'pocetna', component: PocetnaComponent},
@@ -125,10 +133,10 @@ const routes: Routes = [
       {path: 'izmjena-proizvod1/:id', component: Proizvodi1IzmjenaComponent },
       {path: 'izmjena-proizvod2/:id', component: Proizvodi2IzmjenaComponent },
     ] },
-  {path: 'njemacki', component: HomeComponents1Component},
-
-
-  {path: 'engleski', component: HomeComponents2Component},
+      {path: 'njemacki', component: Home1Component},
+      {path: 'vijesti1', component: VijestiSve1Component},
+      {path: 'vijesti2', component: VijestiSve2Component},
+  {path: 'engleski', component: Home2Component},
   { path: 'forgot-password', component: ForgotPasswordComponent },
   {path: '**', component: NotFoundComponent}
 

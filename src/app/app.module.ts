@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { RichTextEditorAllModule, RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AppComponent } from './app.component';
@@ -22,7 +22,6 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { AuthServiceService } from './services/auth-service.service';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AdminTopbarComponent } from './components/admin-topbar/admin-topbar.component';
 import { TextEditorComponent } from './components/text-editor/text-editor.component';
@@ -71,9 +70,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ConvertToSpacesPipe } from './models/convert-to-spaces.pipe';
-import { HomeComponents1Component } from './components/home-components1/home-components1.component';
 import { Navbar1Component } from './components/navbar1/navbar1.component';
-import { HomeComponents2Component } from './components/home-components2/home-components2.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { Vijesti1Component } from './components/vijesti1/vijesti1.component';
 import { Vijest1Component } from './components/vijest1/vijest1.component';
@@ -89,7 +86,9 @@ import { KategorijeProizvoda1Component } from './components/admin/kategorije-pro
 import { KategorijeProizvoda2Component } from './components/admin/kategorije-proizvoda2/kategorije-proizvoda2.component';
 import { KategorijeProizvoda1AddComponent } from './components/admin/kategorije-proizvoda1-add/kategorije-proizvoda1-add.component';
 import { KategorijeProizvoda2AddComponent } from './components/admin/kategorije-proizvoda2-add/kategorije-proizvoda2-add.component';
+// tslint:disable-next-line: max-line-length
 import { KategorijeProizvoda1IzmjenaComponent } from './components/admin/kategorije-proizvoda1-izmjena/kategorije-proizvoda1-izmjena.component';
+// tslint:disable-next-line: max-line-length
 import { KategorijeProizvoda2IzmjenaComponent } from './components/admin/kategorije-proizvoda2-izmjena/kategorije-proizvoda2-izmjena.component';
 import { KategorijeVijesti1Component } from './components/admin/kategorije-vijesti1/kategorije-vijesti1.component';
 import { KategorijeVijesti1AddComponent } from './components/admin/kategorije-vijesti1-add/kategorije-vijesti1-add.component';
@@ -109,6 +108,12 @@ import { Proizvodi1AddComponent } from './components/admin/proizvodi1-add/proizv
 import { Proizvodi2AddComponent } from './components/admin/proizvodi2-add/proizvodi2-add.component';
 import { Proizvodi1IzmjenaComponent } from './components/admin/proizvodi1-izmjena/proizvodi1-izmjena.component';
 import { Proizvodi2IzmjenaComponent } from './components/admin/proizvodi2-izmjena/proizvodi2-izmjena.component';
+import { ProizvodiSve1Component } from './components/proizvodi-sve1/proizvodi-sve1.component';
+import { ProizvodiSve2Component } from './components/proizvodi-sve2/proizvodi-sve2.component';
+import { Home1Component } from './components/home1/home1.component';
+import { Home2Component } from './components/home2/home2.component';
+import { Proizvod1Component } from './components/proizvod1/proizvod1.component';
+import { Proizvod2Component } from './components/proizvod2/proizvod2.component';
 
 
 // tslint:disable-next-line: typedef
@@ -120,8 +125,8 @@ export function rootLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomeComponent,
-    HomeComponents1Component,
-    HomeComponents2Component,
+    Home1Component,
+    Home2Component,
     NavbarComponent,
     Navbar1Component,
     Navbar2Component,
@@ -160,6 +165,8 @@ export function rootLoaderFactory(http: HttpClient) {
     AktuelnoComponent,
     PocetnaComponent,
     ProizvodiComponent,
+    Proizvodi1Component,
+    Proizvodi2Component,
     ProizvodComponent,
     ProizvodiSveComponent,
     SviProizvodiComponent,
@@ -170,9 +177,7 @@ export function rootLoaderFactory(http: HttpClient) {
     KategorijeProizvodaIzmjenaComponent,
     KrajComponent,
     ConvertToSpacesPipe,
-    HomeComponents1Component,
     Navbar1Component,
-    HomeComponents2Component,
     Navbar2Component,
     Vijesti1Component,
     Vijest1Component,
@@ -207,7 +212,13 @@ export function rootLoaderFactory(http: HttpClient) {
     Proizvodi1AddComponent,
     Proizvodi2AddComponent,
     Proizvodi1IzmjenaComponent,
-    Proizvodi2IzmjenaComponent
+    Proizvodi2IzmjenaComponent,
+    ProizvodiSve1Component,
+    ProizvodiSve2Component,
+    Home1Component,
+    Home2Component,
+    Proizvod1Component,
+    Proizvod2Component
   ],
   imports: [
     BrowserModule,
