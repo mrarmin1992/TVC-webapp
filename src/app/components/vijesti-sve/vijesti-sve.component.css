@@ -18,20 +18,23 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 23%);
   grid-gap: 20px;
+  color: rgba(126, 126, 126, 0.685);
+  font-size: 15px;
 }
 
 .grid-cell {
-  border: solid whitesmoke;
+  border: solid 1px rgba(64, 107, 68, 0.377);
   height: auto;
-  border-radius: 3px;
+  border-radius: 10px;
   text-align: right, bottom;
+
 }
 
 .mojDiv {
   padding-left: 5% !important;
 }
 .vijestiBanner {
-background-image: linear-gradient(to right, rgb(255, 255, 255) 16%,rgba(41, 96, 168, 0) 90%), url(../../../assets/Slike/news.jpg);
+background-image: url(../../../assets/Slike/vijestinaslovna1.jpg);
   background-attachment: fixed;
   background-size: cover;
   height: 500px;
@@ -41,7 +44,8 @@ background-image: linear-gradient(to right, rgb(255, 255, 255) 16%,rgba(41, 96, 
 .vijest{
   padding-top: 260px;
   padding-left: 130px;
-  font-size: 60px;
-  color:rgba(61, 140, 177, 0.637);
-  letter-spacing: 8px;
+  font-size: 65px;
+  color:rgb(255, 255, 255);
+  letter-spacing: 10px;
+  
 }
