@@ -12,7 +12,7 @@ img {
 }
 
 a {
-  color: black !important;
+  color: rgb(64, 94, 64) !important;
 }
 .grid-container {
   display: grid;
@@ -23,7 +23,7 @@ a {
 }
 
 .grid-cell {
-  border: solid 1px rgba(64, 107, 68, 0.377);
+  border: solid 1px rgba(64, 94, 64, 0.514);
   height: auto;
   border-radius: 10px;
   text-align: right, bottom;
