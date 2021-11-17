@@ -31,7 +31,7 @@
     padding-left: 5% !important;
   }
   .proizvodiBanner {
-  background-image: linear-gradient(to right, rgb(255, 255, 255) 16%,rgba(41, 96, 168, 0) 90%), url(../../../assets/Slike/tvc7.jpg);
+    background-image: url(../../../assets/Slike/proizvodinaslovna0.jpg);
     background-attachment: fixed;
     background-size: cover;
     height: 500px;
@@ -41,8 +41,8 @@
   .proizvod{
     padding-top: 260px;
     padding-left: 130px;
-    font-size: 60px;
-    color:rgba(61, 140, 177, 0.637);
-    letter-spacing: 8px;
+    font-size: 65px;
+    color:rgb(255, 255, 255);
+    letter-spacing: 10px;
   }
   
