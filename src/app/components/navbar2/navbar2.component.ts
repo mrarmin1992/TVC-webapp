@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 import { TranslateConfigService } from 'src/app/services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
+import { Vijest2 } from 'src/app/models/Vijest2';
+import { Vijesti2Service } from 'src/app/services/vijesti2.service';
 
 
 @Component({
@@ -20,12 +22,12 @@ export class Navbar2Component implements OnInit {
   b = 1;
   pretraga: '';
   user: any;
-  vijesti: Vijest[];
-  sveVijesti: Vijest[];
+  vijesti: Vijest2[];
+  sveVijesti: Vijest2[];
   constructor(public nav: NavbarService,
               private authService: AuthServiceService,
               private storage: AngularFireStorage,
-              private vijestiService: VijestiService,
+              private vijestiService: Vijesti2Service,
               private router: Router,
               private translateConfigService: TranslateConfigService) { }
 
@@ -33,15 +35,15 @@ export class Navbar2Component implements OnInit {
     this.vijestiService.getFocused().subscribe(vijesti => {
       this.vijesti = vijesti;
       this.vijesti.forEach(doc => {
-        const ref = this.storage.ref(`Vijesti/${doc.Podnaslov}`);
+        const ref = this.storage.ref(`Vijesti2/${doc.Podnaslov}`);
         doc.Slika = ref.getDownloadURL();
         doc.Podnaslov = doc.Podnaslov.substring(0, 50) + '...';
       });
     });
-    this.vijestiService.getVijesti().subscribe(vijesti => {
+    this.vijestiService.getVijesti2().subscribe(vijesti => {
       this.sveVijesti = vijesti;
       this.sveVijesti.forEach(doc => {
-        const ref = this.storage.ref(`Vijesti/${doc.Podnaslov}`);
+        const ref = this.storage.ref(`Vijesti2/${doc.Podnaslov}`);
         doc.Slika = ref.getDownloadURL();
         doc.Podnaslov = doc.Podnaslov.substring(0, 50) + '...';
       });

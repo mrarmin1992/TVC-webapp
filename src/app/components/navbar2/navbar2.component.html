@@ -23,7 +23,7 @@
                       <li *ngIf="user === null"><a routerLink="/login" style="font-weight: bolder; color: #366956">Sign in</a></li>
                       <li *ngIf="user !== null"><a routerLink="/dashboard" style="font-weight: bolder; color:#366956">Dashboard</a></li>
                       <li><a routerLink="/"><img src="/assets/Slike/bosna.png" style="width: 7%; margin: 2%;"/></a>
-                      <a routerLink="/engleski"><img src="/assets/Slike/england1.png" style="width: 7%; margin: 2%;"/></a>
+                      <a routerLink="/engleski"><img src="/assets/Slike/england.png" style="width: 7%; margin: 2%;"/></a>
                       <a routerLink="/njemacki"><img src="/assets/Slike/germany3.png" style="width: 7%; margin: 2%;"/></a></li>
                     </ul>
   
@@ -36,7 +36,7 @@
                           <ul class="nav_con_left">
   
                             <li id="nc_l-2-1"><a>Važne vijesti</a></li>
-                            <li id="nc_l-2-2"><a routerLink="/vijesti" translate>Sve vijesti</a></li>
+                            <li id="nc_l-2-2"><a routerLink="/vijesti2" translate>Sve vijesti</a></li>
                           </ul>
                         </div>
                         <div class="sub_nav-r">
@@ -47,7 +47,7 @@
                               <div class="widget">
                                 <div class="blog-list-widget">
                                   <div class="list-group">
-                                    <a *ngFor="let index of [0,1,2]" routerLink="/vijest/{{vijesti[index].Id}}" translate
+                                    <a *ngFor="let index of [0,1,2]" routerLink="/vijest2/{{vijesti[index].Id}}" translate
                                       class="list-group-item list-group-item-action flex-column align-items-start">
                                       <div class="w-100 justify-content-between">
   
@@ -64,14 +64,14 @@
                           </div>
                           <div id="nc_r-2-2">
                             <ul>
-                              <div><a class="title-subnav" routerLink="/vijesti">Sve vijesti</a></div>
+                              <div><a class="title-subnav" routerLink="/vijesti2">Sve vijesti</a></div>
                               <br>
                               <div class="row" style="height: inherit;">
                                 <div class="col-lg-6" style="border-right: 1px solid grey;">
                                   <div class="widget">
                                     <div class="blog-list-widget">
                                       <div class="list-group">
-                                        <a *ngFor="let index of [0,1,2]" routerLink="/vijest/{{sveVijesti[index].Id}}" translate
+                                        <a *ngFor="let index of [0,1,2]" routerLink="/vijest2/{{sveVijesti[index].Id}}" translate
                                           class="list-group-item list-group-item-action flex-column align-items-start">
                                           <div class="w-100 justify-content-between">
                                             <!--<img [src]="sveVijesti[index].Slika | async" alt="" class="nedavne float-left">-->
@@ -88,7 +88,7 @@
                                   <div class="widget">
                                     <div class="blog-list-widget">
                                       <div class="list-group">
-                                        <a *ngFor="let index of [3,4,5]" routerLink="/vijest/{{sveVijesti[index].Id}}"
+                                        <a *ngFor="let index of [3,4,5]" routerLink="/vijest2/{{sveVijesti[index].Id}}"
                                           class="list-group-item list-group-item-action flex-column align-items-start">
                                           <div class="w-100 justify-content-between">
                                             <!--<img [src]="sveVijesti[index].Slika | async" alt="" class="nedavne float-left">-->
