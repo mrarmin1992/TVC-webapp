@@ -1,5 +1,5 @@
 <div class="vijestiBanner">
-  <p class="vijest naslovBaner">Vijesti</p>
+  <p class="vijest naslovBaner">News</p>
 
 
 </div>
@@ -10,7 +10,7 @@
         <div *ngFor="let item of pageOfItems" class="grid-cell">
           <span>
             <a routerLink="/vijest/{{item.Id}}" title="">
-                <img [src]="item.Slika | async" alt="" class="" style="object-fit:contain">
+                <img [src]="item.Slika | async" alt="" class="" style="object-fit:cover">
             </a>
             <span class="proba">
               <h4><a routerLink="/vijest/{{item.Id}}" title="">{{item.Naslov}}</a></h4>
