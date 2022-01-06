@@ -67,8 +67,6 @@ import { KategorijeProizvodaAddComponent } from './components/admin/kategorije-p
 import { KategorijeProizvodaIzmjenaComponent } from './components/admin/kategorije-proizvoda-izmjena/kategorije-proizvoda-izmjena.component';
 import { KrajComponent } from './components/kraj/kraj.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ConvertToSpacesPipe } from './models/convert-to-spaces.pipe';
 import { Navbar1Component } from './components/navbar1/navbar1.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
@@ -115,11 +113,6 @@ import { Home2Component } from './components/home2/home2.component';
 import { Proizvod1Component } from './components/proizvod1/proizvod1.component';
 import { Proizvod2Component } from './components/proizvod2/proizvod2.component';
 
-
-// tslint:disable-next-line: typedef
-export function rootLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
-}
 
 @NgModule({
   declarations: [
@@ -237,13 +230,6 @@ export function rootLoaderFactory(http: HttpClient) {
     FacebookModule.forRoot(),
     JwPaginationModule,
     BrowserAnimationsModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: rootLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
     HttpClientModule,
     BrowserModule,
     AppRoutingModule
