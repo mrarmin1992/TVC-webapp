@@ -6,8 +6,8 @@ import { AuthServiceService } from '../../services/auth-service.service';
 import { VijestiService } from '../../services/vijesti.service';
 import { Vijest } from '../../models/Vijest';
 import { NgForm } from '@angular/forms';
-import { TranslateConfigService } from 'src/app/services/translate-config.service';
-import { TranslateModule } from '@ngx-translate/core';
+
+
 
 
 @Component({
@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
               private storage: AngularFireStorage,
               private vijestiService: VijestiService,
               private router: Router,
-              private translateConfigService: TranslateConfigService) { }
+              ) { }
 
   ngOnInit() {
     this.vijestiService.getFocused().subscribe(vijesti => {
@@ -59,9 +59,6 @@ changeValue2() {
   this.b = this.b + 1;
 }
 
-changeLanguage(type: string) {
-  this.translateConfigService.changeLanguage(type);
-}
   onSubmit(form: NgForm) {
     if (form.invalid) {
       console.log('err');
